@@ -25,6 +25,7 @@ public class MessagesServlet extends JsonServlet {
     // A GET request should return a list of messages
     @Override
     protected List<Message> doGet(HttpServletRequest req) throws ServletException, IOException, ApiException {
+
         //get user
         User currentUser = getAuthenticatedUser(req);
         if(currentUser == null)
